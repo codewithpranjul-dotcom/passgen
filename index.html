@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Generate Strong & Sercure Passwords using our free Password Generator. Customizable length and characters options."> 
+    <title>Password Generator - Create Strong & Secure Passwords</title>
+    <meta name="description"
+        content="Generate strong random passwords instantly with our free password generator. Customize password length and include uppercase letters, lowercase letters, numbers and symbols.">
+    <meta name="robots" content="index, follow">
+
+
+    <meta name="author" content="Your Name">
+
+
+    <meta name="theme-color" content="#2563eb">
+
+    <!-- Canonical URL: Replace with your real Vercel URL -->
+    <link rel="canonical" href="https://YOUR-PROJECT.vercel.app/">
+
+    <!-- Open Graph: Social Media Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Free Password Generator">
+    <meta property="og:description"
+        content="Create strong and random passwords for free. Customize your password length and character options in seconds.">
+    <meta property="og:url" content="https://YOUR-PROJECT.vercel.app/">
+    <meta property="og:image" content="https://YOUR-PROJECT.vercel.app/preview.png">
+    <meta property="og:site_name" content="Free Password Generator">
+
+    <!-- Twitter / X Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Password Generator">
+    <meta name="twitter:description" content="Generate strong and secure passwords instantly for free.">
+    <meta name="twitter:image" content="https://YOUR-PROJECT.vercel.app/preview.png">
+
+    <title>Password Generator | Generate Strong Passwords in just one click !</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="script.js" defer></script>
+
+<body>
+    <header>
+        <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-shield-check" viewBox="0 0 16 16">
+                <path
+                    d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56" />
+                <path
+                    d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+            </svg>Password Generator</h2> <button id="themeBtn" class="theme-btn">
+            <span id="themeIcon">🌙</span>
+        </button>
+    </header>
+    <hr>
+    <main>
+        <h1>Generate Strong & Secure Passwords <span>Instantly !</span></h1>
+        <h5>Create unique & secure passwords in just one click.</h5>
+        <div class="password-card">
+
+            <div class="box">
+                <input type="text" id="password" placeholder="Your Generated Password :" readonly>
+
+                <button id="copyBtn" type="button" title="Copy password" aria-label="Copy password">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4 1.5A1.5 1.5 0 0 1 5.5 0h7A1.5 1.5 0 0 1 14 1.5v10a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 4 11.5zm1.5-.5a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-10a.5.5 0 0 0-.5-.5z" />
+                        <path
+                            d="M2.5 2A1.5 1.5 0 0 0 1 3.5v11A1.5 1.5 0 0 0 2.5 16h7a1.5 1.5 0 0 0 1.5-1.5V14h-1v.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H3V2z" />
+                    </svg>
+
+                </button>
+            </div>
+
+
+            <div class="length-container">
+                <label>Password Enquaries</label>
+
+                <div class="length-control">
+                    <button type="button" id="decrease">−</button>
+
+                    <span id="length-value">16</span>
+
+                    <button type="button" id="increase">+</button>
+                </div>
+            </div>
+
+
+            <div class="check">
+                <input type="checkbox" name="" id="upper">UpperCase (A-Z)
+                <input type="checkbox" name="" id="lower">LowerCase (a-z)
+                <input type="checkbox" name="" id="number">Number
+                <input type="checkbox" name="" id="symbol">Symbols
+            </div>
+            <div class="generate">
+                <button id="generate"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                        </svg></span> Generate</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
